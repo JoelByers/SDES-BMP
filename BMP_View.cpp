@@ -8,9 +8,14 @@
 
 using namespace std;
 
-int main()
+int main(int argc, char *argv[])
 {
-    string fileString = "SD.bmp";
+    if(argc <= 1){
+        cout << "Missing input file" << endl;
+        return 1;
+    }
+
+    string fileString = argv[1];
 
     FILE* picture;
     picture = fopen(fileString.c_str(), "rb");

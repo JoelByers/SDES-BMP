@@ -249,7 +249,7 @@ void fbox(bool input[8], bool key[8]){
 }
 
 //Part of code segment taken from: https://www.educative.io/answers/how-to-convert-a-number-from-decimal-to-binary-in-cpp
-void asciiToBinary(char letter, bool binaryArray[8]){
+void asciiToBinary(unsigned char letter, bool binaryArray[8]){
     int binary =0;
     int remainder, product = 1;
     int decimal = int(letter);
@@ -271,7 +271,7 @@ void asciiToBinary(char letter, bool binaryArray[8]){
 
 // Solution found here:
 // https://stackoverflow.com/questions/23344257/convert-a-string-of-binary-into-an-ascii-string-c
-char binaryToAscii(bool binary[8]){
+unsigned char binaryToAscii(bool binary[8]){
     string binaryStr = "";
     for(int i = 0; i < 8; i++){
         binaryStr.push_back(binary[i] ? '1' : '0');
@@ -281,7 +281,7 @@ char binaryToAscii(bool binary[8]){
     std::string output;
     std::bitset<8> bits;
     sstream >> bits;
-    char c = char(bits.to_ulong());
+    unsigned char c = (unsigned char)(bits.to_ulong());
     
     return c;
 }
