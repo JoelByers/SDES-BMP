@@ -1,2 +1,4 @@
 *.out
 ./vscode
+*.bmp
+*.DS_Store
